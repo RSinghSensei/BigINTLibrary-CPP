@@ -1,6 +1,4 @@
-# BigINTLibrary-CPP
-
-Implementation of BigInt (Version 1.0)
+BigInt Library Implementation (Version 1.0)
 
 To use it, just add both files to your project directory
 
