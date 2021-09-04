@@ -15,8 +15,8 @@ BigInteger::BigInteger(std::string a) {
 	num = a;
 }
 
-const std::string BigInteger::display(){
-	return num;
+void BigInteger::display(){
+	std::cout << num << std::endl;
 }
 
 
@@ -189,4 +189,34 @@ std::string BigInteger::Fibonacci(std::string a) {
 	}
 	return j;
 
+}
+
+
+void BigInteger::operator=(BigInteger const &a) {
+	this->num = a.num;
+}
+
+void BigInteger::operator=(std::string const &a) {
+	this->num = a;
+}
+
+BigInteger BigInteger::operator+(BigInteger const &a) {
+	BigInteger temp;
+	std::cout << "Constructing a new object" << std::endl;
+	std::cout << this->num << " " << a.num << std::endl;
+	temp = Addfunc(this->num, a.num);
+	return temp;
+
+}
+
+BigInteger BigInteger::operator-(BigInteger const &a) {
+	BigInteger temp;
+	temp = SubtractFunc(this->num, a.num);
+	return temp;
+}
+
+BigInteger BigInteger::operator*(BigInteger const& a) {
+	BigInteger temp;
+	temp = MultiFunc(this->num, a.num);
+	return temp;
 }

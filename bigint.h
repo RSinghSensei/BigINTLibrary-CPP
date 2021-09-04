@@ -6,6 +6,7 @@
 
 
 class BigInteger{
+private:
 	std::string num;
 public:
 	BigInteger();
@@ -16,7 +17,17 @@ public:
 	std::string MultiFunc(std::string a, std::string b);
 	std::string Factorial(std::string a);
 	std::string Fibonacci(std::string a);
-	const std::string display();
+
+	//Operator Functions
+	void operator=(BigInteger const &a);
+	void operator=(std::string const &a);
+	BigInteger operator *(BigInteger const &a);
+	BigInteger operator -(BigInteger const &a);
+	BigInteger operator +(BigInteger const &a);
+
+
+
+	void display();
 };
 
 
